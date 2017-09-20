@@ -1,0 +1,74 @@
+<div ng-controller='profile'>
+<div class="navbar navbar-custom navbar-fixed-top headroom" >
+		<div class="container">
+			<div class="navbar-header">
+				<!-- Button for smallest screens -->
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"><span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+				<a class="navbar-brand" href="index.html"><span style="color: yellow " style="color:yellow">Service<i
+									class="fa fa-cog fa-spin"></i> Provider</span></a></div>
+			<div class="navbar-collapse collapse" id="navigationBar">
+			<ul class="nav navbar-nav pull-right">
+			 <li><a href="#/Filter"><i class="fa fa-user" style="color:yellow"></i><span style="color: black"  ng-show='name'>Welcome {{name}}</span></a></li>
+			<!-- <button class="btn btn-info" value="reset Password" ng-click="set()"><b>Reset Password</b></button>-->
+			<li><a href="#/reset" ><i class="fa fa-check" style="color:yellow"></i><span style="color: black">Reset Password</span></a></li>
+			 <li><a href="#/login"><i class="fa fa-sign-out" style="color:yellow"></i><span style="color: black">logout</span></a></li>
+			 </ul>
+			</div><!--/.nav-collapse -->
+		</div>
+	</div> 
+<br>
+<br>
+	<div class="container">
+		
+		<div class="row">
+			<ul class="breadcrumb">
+			<li><a href="index.html"><i class="fa fa-home"></i>Home</a></li>
+			<li class="active"><i class="fa fa-wrench"></i>Services</li>
+		</ul>
+			<!-- Sidebar -->
+			<aside class="col-md-3 sidebar sidebar-left">
+			
+			<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+					  <div class="panel panel-default">
+						<div class="panel-heading" role="tab" id="headingOne">
+						  <h4 class="panel-title">
+							<button class="btn btn-warning btn-md" value="submit" >
+                                     <i class="fa fa-wheelchair-alt "></i><b>profile</b>
+                                      </button>
+						  </h4>
+						</div>
+					  </div>
+					  <div class="panel panel-default">
+						<div class="panel-heading" role="tab" id="headingTwo">
+						  <h4 class="panel-title">
+							<button class="btn btn-info btn-md" value="submit" ng-click="clist()">
+                                     <b>Customer's list</b>
+                                      </button>
+						  </h4>
+						</div>
+						</div>
+			</div>
+</aside>
+<center>
+<br><br>
+<article class="col-md-9 maincontent">
+<div class="form-group">
+<div class="row" ng-repeat='x in serv' ng-show='serv'>
+	<div class="col-md-9"><br><br>
+			<h3 style='color:orange;'>welcome {{x.name}}</h3>
+			<div class="col-md-11">
+			
+            <h4 style="color:blue">Customer Name :<span style="color:orange">{{x.name}}</span> </h4><br>
+			<h4 style="color:blue">Address :<span style="color:orange">{{x.address}} </span></h4><br>
+			<h4 style="color:blue">City :<span style="color:orange">{{x.city}}</span> </h4><br>
+			<h4 style="color:blue">Pincode :<span style="color:orange">{{x.pincode}}</span> </h4><br>
+			<h4 style="color:blue">Phone Number :<span style="color:orange">{{x.phone}}</span> </h4><br>
+			</div>
+			</div>
+			</div>
+</div>
+</article>
+</center>
+</div>
+</div>
+</div>

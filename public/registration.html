@@ -1,0 +1,49 @@
+<div ng-controller="regController">
+<div class="navbar navbar-custom navbar-fixed-top headroom" class="bg-info" >
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<!-- Button for smallest screens -->
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"><span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+				<a class="navbar-brand" href="index.html"><span style="color:yellow">Service<i
+									class="fa fa-cog fa-spin"></i> Provider</span></a></div>
+			<div class="navbar-collapse collapse" id="navigationBar">
+			<ul class="nav navbar-nav pull-right">
+			 <li><a href="#/login"><i class="fa fa-sign-in" class="btn btn-default"></i><span style="color:black">Login</span></a></li>
+			
+			<li><a href="#/register" ><i class="fa fa-pencil-square-o" class="btn btn-default"></i><span style="color:black">Register</span></a></li>
+			</div><!--/.nav-collapse -->
+		</div>
+	</div>
+<div class="container">
+	     <div class="col-md-4 col-md-offset-4">
+		 <br><br>
+<h3 class="text-center text-info">Registration </h3>
+<input class="form-control" type="text" placeholder="full name" ng-model="name"><br>
+
+<input class="form-control" type="email" placeholder="Email" ng-model="email"><br>
+
+<input class="form-control" type="password" placeholder="password" ng-model="password"><br>
+
+<select class="form-control" ng-model="desig" ng-options="desig for desig in desigs">
+<option value="" disabled selected>Designation</option>
+</select><br>
+<div ng-show="desig=='serviceMan'">
+
+<select class="form-control" ng-model="ServiceDesig" ng-options="ServiceDesig for ServiceDesig in ServiceDesigs" >
+<option value="" disabled selected>Servicetype</option>
+</select><br>
+</div>
+
+<input class="form-control" type="text" placeholder="Address" ng-model="address"><br>
+
+<input class="form-control" type="text" placeholder="city" ng-model="city"><br>
+
+<input class="form-control" type="text" placeholder="Pincode" ng-model="pincode"><br>
+
+<input class="form-control" type="text" placeholder="Mobile number" ng-model="phone"><br>
+
+<button class="btn btn-info" value="submit" ng-click="doReg()"><b>Submit</b>
+</button>
+</div>
+</div>
+</div>

@@ -1,0 +1,59 @@
+<div ng-controller='loginController'>
+<div class="navbar navbar-custom navbar-fixed-top headroom" class="bg-info" >
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<!-- Button for smallest screens -->
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"><span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+				<a class="navbar-brand" href="index.html"><span style="color:yellow">Service<i
+									class="fa fa-cog fa-spin"></i> Provider</span></a></div>
+			<div class="navbar-collapse collapse" id="navigationBar">
+			<ul class="nav navbar-nav pull-right">
+			 <li><a href="#/login"><i class="fa fa-sign-in" class="btn btn-default"></i><span style="color:black">Login</span></a></li>
+			
+			<li><a href="#/register" ><i class="fa fa-pencil-square-o" class="btn btn-default"></i><span style="color:black">Register</span></a></li>
+			</div><!--/.nav-collapse -->
+		</div>
+	</div>
+
+    <div class="container">
+	     <div class="col-md-4 col-md-offset-4">
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	         <h3 class='text-center text-info'>Login</h3>
+                   <div>
+										 <span class="text-danger"></span> <input
+											type="text" class="form-control" name="email" id="signemail"
+											ng-pattern="/\S+@\S+\.\S+/" placeholder="Email as userName" ng-model="email" required /> <span
+											style="color: red; font-size: 20"
+											ng-show="myName.email.$touched && myName.email.$invalid">
+											<span ng-show="myName.email.$error.required">Email is
+												required</span> <span style="color: red; font-size: 13"
+											ng-show="myName.email.$error.pattern">Invalid email
+												address</span>
+										</span>
+				  </div>
+                                    <div class="top-margin">
+										 <span class="text-danger"></span> <input
+											type="password" class="form-control" name="psw" placeholder="Password"ng-model="password" id="signpsw">
+										<div id="pwdWrong"></div>
+									</div>
+									
+           	                        <div class="pager">
+									<button class="btn btn-success btn-md pull-left" value="submit" popover="Login with ur Registred email only" placement="left" ng-click="login()">
+                                     <b>Sign in</b>
+                                      </button>
+			                          <button class="btn btn-info btn-xs pull-right" value="Forgot Password" ng-click="click()"><b>Forgot Password</b></button>
+			                        </div>
+			                        <div class="pager">
+			                               <span>new user Register your self</span><br><br>
+			                               <button class="btn btn-primary" value="Register" ng-click="reg()"><b>Register</b></button>
+			                        </div>              
+			
+		 </div>
+    </div>
+  
+</div>

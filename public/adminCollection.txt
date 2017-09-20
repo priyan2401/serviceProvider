@@ -1,0 +1,28 @@
+
+collection name : admin
+
+==> once we place the collection name in schema as "admin" , if you run the login api for the admin, then it will create as "admins"
+
+/* 1 */
+{
+    
+    "username" : "priya",
+    "password" : "priya",
+    "location" : "vijayawada"
+}
+
+/* 2 */
+{
+    
+    "username" : "leena",
+    "password" : "leena",
+    "location" : "vizag"
+}
+
+/* 3 */
+{
+    
+    "username" : "heena",
+    "password" : "heena",
+    "location" : "hyderabad"
+}

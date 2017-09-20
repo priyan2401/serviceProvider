@@ -1,0 +1,27 @@
+{
+  "name": "loginapp",
+  "version": "1.0.0",
+  "description": "about employee login",
+  "main": "app1.js",
+  "scripts": {
+    "start": "node app1.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "nothing"
+  },
+  "keywords": [
+    "node",
+    "ctl",
+    "app"
+  ],
+  "author": "priya",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.3",
+    "express-session": "^1.15.2",
+    "body-parser": "^1.15.0",
+        "express": "^4.13.4",
+        "mongodb": "^2.2.9"
+  }
+}

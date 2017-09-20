@@ -1,0 +1,111 @@
+<div ng-controller='customer'>
+<div class="navbar navbar-default navbar-fixed-top headroom" >
+		<div class="container">
+			<div class="navbar-header">
+				<!-- Button for smallest screens -->
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"><span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+				<a class="navbar-brand" href="index.html"><span style="color: yellow">Service<i
+									class="fa fa-cog fa-spin"></i> Provider</span></a></div>
+			<div class="navbar-collapse collapse" id="navigationBar">
+			<ul class="nav navbar-nav pull-right">
+			 <li><a href="#/Filter"><i class="fa fa-user" style="color:yellow"></i><span style="color: black" ng-show="name">Welcome {{name}}</span></a></li>
+			<!-- <button class="btn btn-info" value="reset Password" ng-click="set()"><b>Reset Password</b></button>-->
+			<li><a href="#/reset" ><i class="fa fa-check" style="color:yellow"></i> <span style="color: black">Reset Password</span></a></li>
+			 <li><a href="#/login"><i class="fa fa-sign-out" style="color:yellow"></i> <span style="color: black">logout</span></a></li>
+			 </ul>
+			</div><!--/.nav-collapse -->
+		</div>
+	</div> 
+	
+<div class="container">
+		
+		<ol class="breadcrumb">
+			<li><a href="index.html"><i class="fa fa-home"></i>Home</a></li>
+			<li class="active"><i class="fa fa-wrench"></i>Services</li>
+		</ol>
+
+		<div class="row">
+			
+			<!-- Sidebar -->
+			<aside class="col-md-3 sidebar sidebar-left">
+			
+			<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+					  <div class="panel panel-default">
+						<div class="panel-heading" role="tab" id="headingOne">
+						  <h4 class="panel-title">
+							<button class="btn btn-warning btn-md" value="submit" ng-click="profile()">
+                                     <i class="fa fa-wheelchair-alt "></i><b>profile</b>
+                                      </button>
+						  </h4>
+						</div>
+					  </div>
+					  
+					  <div class="panel panel-default">
+						<div class="panel-heading" role="tab" id="headingThree">
+						  <h4 class="panel-title">
+							<button class="btn btn-info btn-md" value="submit" ng-click="sugg()">
+                                     <i class="fa fa-envelope-o"></i><b>Suggessions</b>
+                                      </button>
+						  </h4>
+						</div>
+						</div>
+					  <div class="panel panel-default">
+						<div class="panel-heading" role="tab" id="headingFour">
+						  <h4 class="panel-title">
+							<button class="btn btn-info btn-md" value="submit" ng-click="clist()">
+                                     <b>Payments</b>
+                                      </button>
+						  </h4>
+						</div>
+					  </div>
+					   
+					   
+</div>
+</aside>
+<center>
+
+<article class="col-md-9 maincontent">
+<div class="form-group">
+					   <div class="col-md-5">
+						  <label for="sel1">Select Service Type <br><i><small></small></i></label>
+												
+						  <select style="width:100%;" class="form-control" name="servicetype" id='sel_id' ng-model="ServiceDesig" ng-options="ServiceDesig for ServiceDesig in serviceTypes" >
+                          <option value="">select service</option>
+						  </select>
+						  </div>
+						  <div class="col-md-3">
+						<label>Enter PINCode </label>
+						<input style="width:100%;" type="text" class="form-control" name="pin" id='pin' ng-model="pincode" placeholder="Enter PINCode" required/>
+						<span style="color:red; font-size:13" ng-show="myForm.pin.$touched && myForm.pin.$invalid">PINCode is Mandatory</span>
+													
+						  
+						  </div>
+						  <div class="col-md-1">
+						  <button type="button" style="margin-top: 25px;" value="submit" ng-click="search()" class="btn btn-info" data-toggle="modal" data-target="#myModal">GO</button>
+
+						  </div>
+					   </div> 
+					   
+					   <div class="container-fluid">
+					  
+			<div  class="row" ng-repeat="x in res" ng-show="res">
+			<div class="col-md-9"><br><br>
+			<h4 style='color:green;'>Your Service is Available</h4>
+			<div class="col-lg-9">
+			<table class='table table-striped' style='table-border:1px;'><thead> <tr> <th> Name </th><th> Service Type </th> <th> Pincode </th> <th> City </th><th> Phone Number </th> </tr></thead><tbody><tr> <td> {{x.name}}</td><td> {{x.ServiceDesig}}</td> <td>{{x.pincode}}</td> <td> {{x.city}}</td> <td>{{x.phone}}</td></tr></tbody></table>
+			<h4 class='text-center text-success'> Click on <code style="background-color:lavenderblush;">Continue</code> to book Service </h4>
+			</div>
+			<div class='col-lg-11 text-right' >
+					
+			 <button type='button'  class='btn btn-warning' name='continue' ng-click='continue()' value='Continue' style='margin-right: 50px;'>Continue</button></div>
+			 <br>
+			</div>
+			</div>
+			</div>
+			</article>
+			<br> <br> <br> <br> <br>
+</center>
+
+</div>
+</div>
+</div>

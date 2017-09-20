@@ -1,0 +1,21 @@
+<div ng-controller='resetController'>
+    <div class="container">
+	<div class="col-md-4 col-md-offset-4">
+	<br>
+	<br><br>
+            <h3 class='text-center text-info'>Reset Password</h3>
+            <span class="text-danger"><input class="form-control" type="username"
+                placeholder="Registered Email" ng-model="email"> </span>
+            </br> <span class="text-danger"><input class="form-control" type="password" placeholder="Old Password "
+                ng-model="oldPassword"> </span>
+			</br><span class="text-danger"><input class="form-control" type="password" placeholder="New Password "
+                ng-model="newPassword"> </span>
+           	<div>
+			<button class="btn btn-info" value="submit" ng-click="reset()">
+                <b>submit</b>
+            </button>
+			</div>
+			
+    </div>
+    </div>
+</div>
